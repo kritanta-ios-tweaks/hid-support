@@ -32,8 +32,8 @@ static inline void MyMSHookSymbol(Type_ *&value, const char *name, void *handle 
     value = reinterpret_cast<Type_ *>(dlsym(handle, name));
 }
 
-extern "C" uint64_t   GSCurrentEventTimestamp(void);
-extern "C" GSEventRef _GSCreateSyntheticKeyEvent(UniChar key, BOOL up, BOOL repeating);
+//extern "C" uint64_t   GSCurrentEventTimestamp(void);
+//extern "C" GSEventRef _GSCreateSyntheticKeyEvent(UniChar key, BOOL up, BOOL repeating);
 
 // used interface from CAWindowServer & CAWindowServerDisplay
 @interface CAWindowServer : NSObject
@@ -344,7 +344,8 @@ static void postMouseEventGS(float x, float y, int click){
     event->record.infoSize = sizeof(GSHandInfo) + sizeof(GSPathInfo);
     event->handInfo.type = getHandInfoType(prev_click, click);
     if (Level_ >= 3){
-        event->handInfo.x52 = 1;
+        //event->handInfo.x52 = 1;  //TODO:fishjam change this
+        event->handInfo._0x50 = 1;
     } else {
     	event->handInfo.pathInfosCount = 1;
     }

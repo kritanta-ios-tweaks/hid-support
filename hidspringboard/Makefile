@@ -9,7 +9,7 @@ hidspringboard_LIBRARIES = substrate
 hidspringboard_LDFLAGS = -F../Frameworks
 
 # rocketbootstrap
-hidspringboard_CFLAGS      += -I/Projects/RocketBootstrap/
+hidspringboard_CFLAGS      += -I../3rdParty/RocketBootstrap/include
 # hidspringboard_LDFLAGS   += -L/Projects/RocketBootstrap/.theos/obj
 # hidspringboard_LIBRARIES += rocketbootstrap
 
