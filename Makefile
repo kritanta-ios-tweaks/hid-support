@@ -9,7 +9,7 @@ export THEOS_DEVICE_PORT=2222
 
 THEOS_PACKAGE_DIR_NAME=debs
 
-SUBPROJECTS = libhidsupport hidspringboard hidlowtide hidsample
+SUBPROJECTS = libhidsupport hidsupporttest hidspringboard hidlowtide hidsample
 
 include $(THEOS)/makefiles/common.mk
-include $(FW_MAKEDIR)/aggregate.mk
+include $(THEOS)/makefiles/aggregate.mk
