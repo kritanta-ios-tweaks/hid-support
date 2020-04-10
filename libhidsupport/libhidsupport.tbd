@@ -1,0 +1,17 @@
+--- !tapi-tbd-v3
+archs:           [ armv7, arm64, arm64e ]
+uuids:           [ 'armv7: 76C1EEA2-8E7C-32CD-86DF-80D06C0E6466', 'arm64: B7CDC220-78E7-3B14-8E5B-A8758A78D0A4', 
+                   'arm64e: 69E5B125-3B82-329C-AB42-1C173A56E206' ]
+platform:        ios
+flags:           [ not_app_extension_safe ]
+install-name:    '@executable_path/usr/local/lib/libhidsupport'
+current-version: 0
+compatibility-version: 0
+exports:         
+  - archs:           [ armv7, arm64, arm64e ]
+    symbols:         [ _hid_get_screen_dimension, _hid_inject_accelerometer, _hid_inject_button_down, 
+                       _hid_inject_button_up, _hid_inject_gseventrecord, _hid_inject_key_down, 
+                       _hid_inject_key_up, _hid_inject_mouse_abs_move, _hid_inject_mouse_keep_alive, 
+                       _hid_inject_mouse_rel_move, _hid_inject_remote_down, _hid_inject_remote_up, 
+                       _hid_inject_text ]
+...

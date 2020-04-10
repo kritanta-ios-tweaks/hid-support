@@ -1,0 +1,7 @@
+# ninja log v5
+0	71	1586546397549271321	.dragon/build/Tweak.xm.mm	179d558fe45cc212
+72	1617	1586546399095041712	.dragon/build/Tweak.xm.mm.o	7f621007d10d3e71
+1617	1880	1586546399357379289	.dragon/sign/.dragon/_/Library/MobileSubstrate/DynamicLibraries/hidlowtide.dylib.unsym	16b64e0fbb2495c3
+1880	1907	1586546399385910882	.dragon/sign/.dragon/_/Library/MobileSubstrate/DynamicLibraries/hidlowtide.dylib.unsigned	74f063a128a502ec
+1907	1919	1586546399398070215	.dragon/_/Library/MobileSubstrate/DynamicLibraries/hidlowtide.dylib	f2149508752b10ad
+1919	1924	0	.dragon/build/trash/stage	1da2de26dffdc77c
