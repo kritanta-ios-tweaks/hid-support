@@ -6,6 +6,9 @@
 #include <objc/runtime.h>
 #include "../hid-support-internal.h"
 
+#include <mach/mach.h>    
+#include <mach/mach_time.h>    
+#include <IOKit/hid/IOHIDEvent.h>   
 #define KEYCODE_RETURN     '\n'
 #define KEYCODE_ESCAPE      27
 

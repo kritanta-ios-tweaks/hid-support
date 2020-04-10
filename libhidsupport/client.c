@@ -35,7 +35,7 @@
 
 #include "../hid-support-internal.h"
 #include "../3rdParty/GraphicsServices/GSEvent.h"
-#include "RocketBootstrap.h"
+#include "rocketbootstrap.h"
 
 #define INVALID_RESULT -5
 

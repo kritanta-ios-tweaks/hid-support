@@ -1,7 +1,6 @@
 {
     Filter = {
         Bundles = ("com.apple.UIKit");
-        Executables = ("backboardd");
         Mode = "Any";
     };
 }

@@ -2,10 +2,10 @@
 export TARGET := iphone:clang
 export TARGET_IPHONEOS_DEPLOYMENT_VERSION = 3.0
 export TARGET_IPHONEOS_DEPLOYMENT_VERSION_arm64 = 7.0
-export ARCHS = armv7 arm64
+export ARCHS = armv7 arm64 arm64e
 
-export THEOS_DEVICE_IP=localhost
-export THEOS_DEVICE_PORT=2222
+export THEOS_DEVICE_IP=192.168.1.116
+export THEOS_DEVICE_PORT=22
 
 THEOS_PACKAGE_DIR_NAME=debs
 
