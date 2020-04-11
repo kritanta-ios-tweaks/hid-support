@@ -1,7 +1,19 @@
 # ninja log v5
-0	145	1586546395386491310	.dragon/build/Tweak.xm.mm	179d558fe45cc212
-145	1932	1586546397173493754	.dragon/build/Tweak.xm.mm.o	38475dd343ab63bc
-1932	2173	1586546397414436636	.dragon/sign/.dragon/_/Library/MobileSubstrate/DynamicLibraries/hidspringboard.dylib.unsym	ab8b4b1f7737b24a
-2173	2201	1586546397443923848	.dragon/sign/.dragon/_/Library/MobileSubstrate/DynamicLibraries/hidspringboard.dylib.unsigned	5f040d552b524d7e
-2201	2214	1586546397457431492	.dragon/_/Library/MobileSubstrate/DynamicLibraries/hidspringboard.dylib	1373f46c59356113
-2215	2220	0	.dragon/build/trash/stage	ea80fae0ab3f20b1
+0	101	1586627780165789087	.dragon/build/Tweak.xm.mm	179d558fe45cc212
+101	1795	1586627781859598399	.dragon/build/Tweak.xm.mm.o	6486440e45dfbf6b
+1795	2049	1586627782113867437	.dragon/sign/.dragon/_/Library/MobileSubstrate/DynamicLibraries/hidspringboard.dylib.unsym	8b91a0c0936a7916
+2049	2079	1586627782144748882	.dragon/sign/.dragon/_/Library/MobileSubstrate/DynamicLibraries/hidspringboard.dylib.unsigned	5f040d552b524d7e
+2079	2093	1586627782158802444	.dragon/_/Library/MobileSubstrate/DynamicLibraries/hidspringboard.dylib	1373f46c59356113
+2093	2098	0	.dragon/build/trash/stage	ea80fae0ab3f20b1
+0	84	1586628125442795878	.dragon/build/Tweak.xm.mm	179d558fe45cc212
+84	1822	1586628127180828222	.dragon/build/Tweak.xm.mm.o	6486440e45dfbf6b
+1822	2080	1586628127438809484	.dragon/sign/.dragon/_/Library/MobileSubstrate/DynamicLibraries/hidspringboard.dylib.unsym	8b91a0c0936a7916
+2080	2109	1586628127468739433	.dragon/sign/.dragon/_/Library/MobileSubstrate/DynamicLibraries/hidspringboard.dylib.unsigned	5f040d552b524d7e
+2109	2122	1586628127482322835	.dragon/_/Library/MobileSubstrate/DynamicLibraries/hidspringboard.dylib	1373f46c59356113
+2122	2127	0	.dragon/build/trash/stage	ea80fae0ab3f20b1
+0	89	1586628198530961750	.dragon/build/Tweak.xm.mm	179d558fe45cc212
+89	1698	1586628200141123858	.dragon/build/Tweak.xm.mm.o	6486440e45dfbf6b
+1698	1946	1586628200388236180	.dragon/sign/.dragon/_/Library/MobileSubstrate/DynamicLibraries/hidspringboard.dylib.unsym	8b91a0c0936a7916
+1946	1973	1586628200416923888	.dragon/sign/.dragon/_/Library/MobileSubstrate/DynamicLibraries/hidspringboard.dylib.unsigned	5f040d552b524d7e
+1973	1987	1586628200430650005	.dragon/_/Library/MobileSubstrate/DynamicLibraries/hidspringboard.dylib	1373f46c59356113
+1987	1992	0	.dragon/build/trash/stage	ea80fae0ab3f20b1

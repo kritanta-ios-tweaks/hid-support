@@ -1,10 +1,10 @@
 --- !tapi-tbd-v3
 archs:           [ armv7, arm64, arm64e ]
-uuids:           [ 'armv7: 76C1EEA2-8E7C-32CD-86DF-80D06C0E6466', 'arm64: B7CDC220-78E7-3B14-8E5B-A8758A78D0A4', 
-                   'arm64e: 69E5B125-3B82-329C-AB42-1C173A56E206' ]
+uuids:           [ 'armv7: 10D3DAD0-23EA-3CED-B7B5-39EBB22D1596', 'arm64: A56D969D-108A-31E5-9F28-4FD2ABE676CB', 
+                   'arm64e: FB3E8144-836C-3CA3-9F69-3A353AFB31EE' ]
 platform:        ios
 flags:           [ not_app_extension_safe ]
-install-name:    '@executable_path/usr/local/lib/libhidsupport'
+install-name:    '/usr/local/lib/libhidsupport.dylib'
 current-version: 0
 compatibility-version: 0
 exports:         

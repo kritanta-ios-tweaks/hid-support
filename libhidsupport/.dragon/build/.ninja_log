@@ -1,6 +1,9 @@
 # ninja log v5
-0	423	1586546395045867830	.dragon/build/client.c.o	fe37913878ecd249
-423	536	1586546395159205243	.dragon/sign/.dragon/_/usr/local/lib/libhidsupport.dylib.unsym	68fb0e03d454759a
-537	563	1586546395187142517	.dragon/sign/.dragon/_/usr/local/lib/libhidsupport.dylib.unsigned	a6b949e006c0b016
-563	575	1586546395199290177	.dragon/_/usr/local/lib/libhidsupport.dylib	a8a3c2074d00ea32
-575	601	0	.dragon/build/trash/stage	cf0d04bfe9552b63
+0	394	1586627779856943895	.dragon/build/client.c.o	481a32de12650fb2
+394	509	1586627779971462191	.dragon/sign/.dragon/_/usr/local/lib/libhidsupport.dylib.unsym	5cb76789cb626ff5
+509	536	1586627780000491291	.dragon/sign/.dragon/_/usr/local/lib/libhidsupport.dylib.unsigned	a6b949e006c0b016
+536	550	1586627780013797430	.dragon/_/usr/local/lib/libhidsupport.dylib	a8a3c2074d00ea32
+550	583	0	.dragon/build/trash/stage	cf0d04bfe9552b63
+0	16	0	.dragon/build/trash/stage	cf0d04bfe9552b63
+0	16	0	.dragon/build/trash/stage	cf0d04bfe9552b63
+0	16	0	.dragon/build/trash/stage	cf0d04bfe9552b63

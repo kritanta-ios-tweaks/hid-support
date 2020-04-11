@@ -927,7 +927,8 @@ static void setupBackboarddMessagePort(){
     UIImage *circle = [UIImage imageWithData:imageData];
 
     cursorWindow = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    [cursorWindow setLevel:9999999];
+    [cursorWindow setWindowLevel:UIWindowLevelAlert];
+    cursorWindow.windowLevel=UIWindowLevelAlert;
     cursorWindow.userInteractionEnabled = NO;
     UIView *cursorContainer = [[UIView alloc] initWithFrame:[cursorWindow bounds]];
     cursor = [[UIImageView alloc] initWithFrame:CGRectMake(0,0,20,20)];
@@ -943,10 +944,10 @@ static void setupBackboarddMessagePort(){
 
 %ctor{
     detectOSLevel();
-    // NSLog(@"hid-support detected OS level %u", Level_);
+    NSLog(@"hid-support detected OS level %u", Level_);
 
     NSString *identifier = [[NSBundle mainBundle] bundleIdentifier];
-    // NSLog(@"hid-support: inside %@", identifier);
+    NSLog(@"hid-support: inside %@", identifier);
 
     if ([identifier isEqualToString:@"com.apple.backboardd"]){
         return;
@@ -965,7 +966,7 @@ static void setupBackboarddMessagePort(){
     // Inside UIKit app
     if (Level_ >= 5){
         // setup GSEvent handler
-        %init();
         init_graphicsservices();
     }
+        %init();
 }

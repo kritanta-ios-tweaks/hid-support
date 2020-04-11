@@ -274,9 +274,9 @@ static float box(float min, float value, float max){
 #define _LOGOS_RETURN_RETAINED
 #endif
 
-@class UIAlertView; @class SBMediaController; @class UIApplication; @class SBBrightnessController; @class SpringBoard; @class VolumeControl; @class UIKeyboardImpl; @class SBLockScreenManager; 
+@class SpringBoard; @class VolumeControl; @class UIApplication; @class SBMediaController; @class SBBrightnessController; @class SBLockScreenManager; @class UIKeyboardImpl; @class UIAlertView; 
 static BOOL (*_logos_orig$_ungrouped$UIApplication$handleEvent$withNewEvent$)(_LOGOS_SELF_TYPE_NORMAL UIApplication* _LOGOS_SELF_CONST, SEL, GSEventRef, id); static BOOL _logos_method$_ungrouped$UIApplication$handleEvent$withNewEvent$(_LOGOS_SELF_TYPE_NORMAL UIApplication* _LOGOS_SELF_CONST, SEL, GSEventRef, id); 
-static __inline__ __attribute__((always_inline)) __attribute__((unused)) Class _logos_static_class_lookup$UIKeyboardImpl(void) { static Class _klass; if(!_klass) { _klass = objc_getClass("UIKeyboardImpl"); } return _klass; }static __inline__ __attribute__((always_inline)) __attribute__((unused)) Class _logos_static_class_lookup$SBLockScreenManager(void) { static Class _klass; if(!_klass) { _klass = objc_getClass("SBLockScreenManager"); } return _klass; }static __inline__ __attribute__((always_inline)) __attribute__((unused)) Class _logos_static_class_lookup$UIAlertView(void) { static Class _klass; if(!_klass) { _klass = objc_getClass("UIAlertView"); } return _klass; }static __inline__ __attribute__((always_inline)) __attribute__((unused)) Class _logos_static_class_lookup$SBMediaController(void) { static Class _klass; if(!_klass) { _klass = objc_getClass("SBMediaController"); } return _klass; }static __inline__ __attribute__((always_inline)) __attribute__((unused)) Class _logos_static_class_lookup$UIApplication(void) { static Class _klass; if(!_klass) { _klass = objc_getClass("UIApplication"); } return _klass; }static __inline__ __attribute__((always_inline)) __attribute__((unused)) Class _logos_static_class_lookup$VolumeControl(void) { static Class _klass; if(!_klass) { _klass = objc_getClass("VolumeControl"); } return _klass; }static __inline__ __attribute__((always_inline)) __attribute__((unused)) Class _logos_static_class_lookup$SpringBoard(void) { static Class _klass; if(!_klass) { _klass = objc_getClass("SpringBoard"); } return _klass; }static __inline__ __attribute__((always_inline)) __attribute__((unused)) Class _logos_static_class_lookup$SBBrightnessController(void) { static Class _klass; if(!_klass) { _klass = objc_getClass("SBBrightnessController"); } return _klass; }
+static __inline__ __attribute__((always_inline)) __attribute__((unused)) Class _logos_static_class_lookup$UIAlertView(void) { static Class _klass; if(!_klass) { _klass = objc_getClass("UIAlertView"); } return _klass; }static __inline__ __attribute__((always_inline)) __attribute__((unused)) Class _logos_static_class_lookup$UIKeyboardImpl(void) { static Class _klass; if(!_klass) { _klass = objc_getClass("UIKeyboardImpl"); } return _klass; }static __inline__ __attribute__((always_inline)) __attribute__((unused)) Class _logos_static_class_lookup$SBMediaController(void) { static Class _klass; if(!_klass) { _klass = objc_getClass("SBMediaController"); } return _klass; }static __inline__ __attribute__((always_inline)) __attribute__((unused)) Class _logos_static_class_lookup$SBBrightnessController(void) { static Class _klass; if(!_klass) { _klass = objc_getClass("SBBrightnessController"); } return _klass; }static __inline__ __attribute__((always_inline)) __attribute__((unused)) Class _logos_static_class_lookup$SBLockScreenManager(void) { static Class _klass; if(!_klass) { _klass = objc_getClass("SBLockScreenManager"); } return _klass; }static __inline__ __attribute__((always_inline)) __attribute__((unused)) Class _logos_static_class_lookup$SpringBoard(void) { static Class _klass; if(!_klass) { _klass = objc_getClass("SpringBoard"); } return _klass; }static __inline__ __attribute__((always_inline)) __attribute__((unused)) Class _logos_static_class_lookup$VolumeControl(void) { static Class _klass; if(!_klass) { _klass = objc_getClass("VolumeControl"); } return _klass; }static __inline__ __attribute__((always_inline)) __attribute__((unused)) Class _logos_static_class_lookup$UIApplication(void) { static Class _klass; if(!_klass) { _klass = objc_getClass("UIApplication"); } return _klass; }
 #line 255 "Tweak.xm"
 static bool isSBUserNotificationAlertVisible(void){
 
@@ -953,7 +953,8 @@ static void _logos_method$SB$SpringBoard$applicationDidFinishLaunching$(_LOGOS_S
     UIImage *circle = [UIImage imageWithData:imageData];
 
     cursorWindow = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    [cursorWindow setLevel:9999999];
+    [cursorWindow setWindowLevel:UIWindowLevelAlert];
+    cursorWindow.windowLevel=UIWindowLevelAlert;
     cursorWindow.userInteractionEnabled = NO;
     UIView *cursorContainer = [[UIView alloc] initWithFrame:[cursorWindow bounds]];
     cursor = [[UIImageView alloc] initWithFrame:CGRectMake(0,0,20,20)];
@@ -967,12 +968,12 @@ static void _logos_method$SB$SpringBoard$applicationDidFinishLaunching$(_LOGOS_S
 
 
 
-static __attribute__((constructor)) void _logosLocalCtor_03ebc957(int __unused argc, char __unused **argv, char __unused **envp){
+static __attribute__((constructor)) void _logosLocalCtor_22ecdd0e(int __unused argc, char __unused **argv, char __unused **envp){
     detectOSLevel();
-    
+    NSLog(@"hid-support detected OS level %u", Level_);
 
     NSString *identifier = [[NSBundle mainBundle] bundleIdentifier];
-    
+    NSLog(@"hid-support: inside %@", identifier);
 
     if ([identifier isEqualToString:@"com.apple.backboardd"]){
         return;
@@ -991,7 +992,7 @@ static __attribute__((constructor)) void _logosLocalCtor_03ebc957(int __unused a
     
     if (Level_ >= 5){
         
-        {Class _logos_class$_ungrouped$UIApplication = objc_getClass("UIApplication"); MSHookMessageEx(_logos_class$_ungrouped$UIApplication, @selector(handleEvent:withNewEvent:), (IMP)&_logos_method$_ungrouped$UIApplication$handleEvent$withNewEvent$, (IMP*)&_logos_orig$_ungrouped$UIApplication$handleEvent$withNewEvent$);}
         init_graphicsservices();
     }
+        {Class _logos_class$_ungrouped$UIApplication = objc_getClass("UIApplication"); MSHookMessageEx(_logos_class$_ungrouped$UIApplication, @selector(handleEvent:withNewEvent:), (IMP)&_logos_method$_ungrouped$UIApplication$handleEvent$withNewEvent$, (IMP*)&_logos_orig$_ungrouped$UIApplication$handleEvent$withNewEvent$);}
 }
